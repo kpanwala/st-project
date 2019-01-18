@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student 1</title>
+  <style>
+
+    body{
+      margin: 0;
+    }
+
+    *{
+      box-sizing: border-box;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  
+    .top_a{
+      background: blue;
+      color: #fff;
+      padding: 12px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .top_a h2{
+      float: left;
+      margin-left: 70px;
+    }
+
+    #stlog{
+      float: right;
+      margin: 27px 0px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      padding: 3px 7px;
+      cursor: pointer;
+    }
+
+    .body_a{
+      width: 100%;
+    }
+
+    .body_b{
+      width: 70%;
+      background: #f7f7f7;
+      padding: 30px;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .bodyca{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .every h3{
+      display: inline;
+    }
+
+    .every{
+      margin-bottom: 17px;
+    }
+
+    .bodycb, .bodycc{
+      margin-top: 17px;
+    }
+
+    .acadde, .fede{
+      border-bottom: 1px solid #666;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .sem1{
+      font-weight: bold;
+      margin: 27px 0px;
+      text-align: center;
+    }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tutf{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fenum{
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.don{
+  text-align: center;
+}
+
+
+  </style>
+</head>
+<body>
+  <section class= 'ceo_a'>
+    <div class= 'top_a'>
+      <h2>Student Details 2018-2019</h2>
+      <span id= "stlog" onclick= 'logoutfun()'>Logout</span>
+    </div>
+    <div class= 'body_a'>
+      <div class= 'body_b'>
+        <div class= 'body_c'>
+          <div class= 'bodyca'>
+            <div class= 'every'><h3>Name: </h3><span>Student Two</span></div>
+            <div class= 'every'><h3>Roll No: </h3><span>u17ec001</span></div>
+            <div class= 'every'><h3>Branch: </h3><span>Electronics</span></div>
+            <div class= 'every'><h3>Course: </h3><span>B-TECH</span></div>
+          </div>
+          <div class= 'bodycb'>
+            <div class= 'acadde'>Academic Details</div>
+            <div class= 'sem1'>Semester 3</div>
+            <div class= 'subs'>
+                <table>
+                    <tr>
+                      <th>Subjects</th>
+                      <th>Marks</th>
+                      <th>Remark</th>
+                    </tr>
+                    <tr>
+                      <td>Data Stucture</td>
+                      <td>23</td>
+                      <td>Due</td>
+                    </tr>
+                    <tr>
+                      <td>Computer Organisation</td>
+                      <td>14</td>
+                      <td>Due</td>
+                    </tr>
+                    <tr>
+                      <td>Network</td>
+                      <td>506</td>
+                      <td>Due</td>
+                    </tr>
+                    <tr>
+                      <td>Discrete Mathematics</td>
+                      <td>50</td>
+                      <td>No Due</td>
+                    </tr>
+                    <tr>
+                      <td>Digital Electronics</td>
+                      <td>43</td>
+                      <td>No Due</td>
+                    </tr>
+                  </table>
+            </div>
+            <div class= 'sem1'>Semester 4 (Will be uploaded after 7 May 2019)</div>
+          </div>
+          <div class= 'bodycc'>
+            <div class= 'fede'>
+              Fee Details
+            </div>
+            <div class= 'fetab'>
+              <div class= 'tut'>
+                <h3>Tution Fee: </h3>
+                <div class= 'tutf'>
+                  <div class= 'rece'>Recived: <span class= 'fenum'>50,000</span></div>
+                  <div class= 'rem'>Remaining: <span class= 'fenum'>0.00</span></div>
+                  <div class= 'lastdate'>Last Date: <span class= 'fenum'>20 Sep 2018</span></div>
+                </div>
+              </div>
+              <div class= 'hostel'>
+                  <h3>Hostel Fee: </h3>
+                  <div class= 'tutf'>
+                    <div class= 'rece'>Recived: <span class= 'fenum'>50,000</span></div>
+                    <div class= 'rem'>Remaining: <span class= 'fenum'>0.00</span></div>
+                    <div class= 'lastdate'>Last Date: <span class= 'fenum'>20 Sep 2018</span></div>
+                  </div>
+                </div>
+                <div class= 'mess'>
+                    <h3>Mess Fee: </h3>
+                    <div class= 'tutf'>
+                      <div class= 'rece'>Recived: <span class= 'fenum'>15,000</span></div>
+                      <div class= 'rem'>Remaining: <span class= 'fenum'>4,000</span></div>
+                      <div class= 'lastdate'>Last Date: <span class= 'fenum'>20 Sep 2018</span></div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class= 'don'>
+      <h3><a href= 'student1.html' download>Download the slip</a></h3>
+    </div>
+  </section>
+
+  <script>
+    function logoutfun(){
+      if(confirm("Do you want to logout?")){
+        close();
+      }
+    }
+  </script>
+</body>
+</html>

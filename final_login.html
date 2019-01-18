@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:35%;
+	display:block;
+    margin:70px auto 0px auto;
+	text-align:center;
+	background-color:white;
+	height:auto;
+    border-radius: 5px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.card:hover {
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+}
+
+/* img {
+    border-radius: 5px 5px 0 0;
+	width:auto;	
+	height:;
+} */
+
+.container {
+    padding: 2px 16px;
+	display: inline-block;
+}
+
+#login{
+display: inline-block;
+	text-align:center;
+	height:auto;
+	width:100%; 
+	text-align:left; 
+	
+}
+
+#submit{
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+	color: white;
+    padding:12px;
+    margin-top:15px;
+    cursor: pointer;
+    width: 100%;
+    border: none; 
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+}
+
+#submit:hover {
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+	background-image: linear-gradient(to left, #00dbde 0%, #fc00ff 100%);
+}
+
+#reset:hover {
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+	background-image: linear-gradient(to left, #f9d423 0%, #ff4e50 100%);
+}
+
+#reset {
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+    color: white;
+    padding: 12px;
+    margin-top:15px;
+    cursor: pointer;
+    width: 100%;
+    border: none; 
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+</style>
+
+
+</head>
+<body style="background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);">
+
+
+
+<div class="card">
+<br>
+<h1>Login</h1>
+  <div class="container">
+	<div id="login">
+	
+		<form method="post" id="form1" >
+			<br>
+			<strong><font size="5px;">Username:</font></strong>  
+			<input type="text" name="username"  id="user" placeholder="Enter your full Name" autofocus required></input>
+			<br>
+			<br>
+			
+			<strong><font size="5px;">Password:</font></strong>
+			<input type="password" name="password"  id="pass" placeholder="Enter your password" required ></input>
+			<br>
+					
+				<button type="submit" id="submit" onclick="myFunction()" >Submit</button>
+				<!-- <input type="reset" id="reset">
+				<br> -->
+			<a href="#" style="float:right;">forget details?</a>
+		  
+		  
+		</form>
+		<br>
+		  <br>
+	</div>
+	
+  </div>
+</div>
+
+
+<script>
+
+	function myFunction() {
+	
+		var x=document.getElementById("user").value;
+		var y=document.getElementById("pass").value;
+		
+		
+		if(x=="admin" && y=="adminsvnit")
+		{
+		//for admin
+		window.open("admin.html");
+		}
+		else if(x== "u17co001" && y== "u17co001" )
+		{
+		//for student of comps dep
+		window.open("student1.html");
+		}
+		else if(x== "u17ec001" && y== "u17ec001")
+		{
+		//for student of civil dep
+		window.open("student2.html");
+		}else if(x== "u17ce001" && y== "u17ce001"){
+			window.open("student3.html");
+		}
+		else{
+		window.alert("Please enter a valid username and password and roll no!!");
+		}
+
+	}
+	
+	</script>
+</body>
+</html> 

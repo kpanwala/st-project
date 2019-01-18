@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+  <style>
+    body{
+      margin: 0;
+    }
+
+    *{
+      box-sizing: border-box;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .div_croa{
+      width: 100%;
+      background: blue;
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .div_croa h2{
+      color: #fff;
+      float: left;
+      margin-left: 70px;
+      text-align: center;
+    }
+
+    .div_crob{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .div_ba{
+      text-align: center;
+      width: 70%;
+      margin: 0px auto;
+    }
+
+    .div_ba h3, .div_bb h3{
+      margin: 70px 0px;
+    }
+
+    .added{
+      width: 100%;
+      
+    }
+
+    .added a{
+      display: block;
+      padding: 12px;
+      background: #f7f7f7;
+      margin-top: 1px;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 5;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .flat{
+      float: right;
+      background: #fff;
+      border: 1px solid #000;
+      padding: 1px 3px;
+      border-radius: 3px;
+      z-index: 6;
+    }
+
+    .flat:hover{
+      background: blue;
+      color: #fff;
+    }
+
+    .div_bb{
+      text-align: center;
+      width: 100%;
+
+    }
+
+    form{
+      padding: 17px;
+      background: #f7f7f7;
+      width: 70%;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .coflabl{
+      font-size: 1.1rem;
+      margin-right: 17px;
+    }
+
+    .labl{
+      margin-bottom: 17px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .labl input{
+      width: 100%;
+      padding: 7px;
+
+    }
+
+    #addstu{
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    #addstu:hover{
+      background: blue;
+      color: #fff;
+    }
+
+    #adlog{
+      float: right;
+      margin: 27px 0px;
+      padding: 3px 7px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      width: 70px;
+    }
+
+    @media (max-width: 1006px){
+      .div_crob{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    }
+  </style>
+</head>
+<body>
+  <section class= 'secaa'>
+    <div class= 'div_croa'>
+      <h2>Welcome to Admin Page</h2>
+      <span id= 'adlog' onclick= 'logoutfun()'>Logout</span>
+    </div>
+    <div class= 'div_crob'>
+      <div class= 'div_ba'>
+        <h3>Added Students</h3>
+        <div class= 'added'><a href= 'student1.html'>Student 1<span class= 'flat' onclick= 'cancelfun("0", event)'>remove</span></a></div>
+        <div class= 'added'><a href= ''>Student 2<span class= 'flat' onclick= 'cancelfun("1", event)'>remove</span></a></div>
+        <div class= 'added'><a href= ''>Student 3<span class= 'flat' onclick= 'cancelfun("2", event)'>remove</span></a></div>
+      </div>
+      <div class= 'div_bb'>
+        <h3>Add Students</h3>
+        <form>
+          <div class= 'labl'>
+            <label class= 'coflabel'>Name: </label>
+            <input type= 'text' placeholder= 'Student name'>
+          </div>
+          <div class= 'labl'>
+            <label class= 'coflabel'>Roll No:</label>
+            <input type= 'text' placeholder= 'Roll No.'>
+          </div>
+          <div class= 'labl'>
+            <label class= 'coflabel'>Branch:</label>
+            <input type= 'text' placeholder= 'Branch'>
+          </div>
+          <input type= 'submit' value= 'Add' id= 'addstu' onclick= 'addfun()'>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function cancelfun(i, event){
+      
+      console.log('working');
+      var added= document.getElementsByClassName('added');
+      var flat= document.getElementsByClassName('flat');
+      if(event.target== flat[i]){
+        added[i].style.display= 'none';
+        event.preventDefault();
+      }
+      
+    }
+
+    function addfun(){
+      
+      var detail= document.getElementsByTagName('input');
+      var name= detail[0].value;
+      var rollno= detail[1].value;
+      var branch= detail[2].value;
+      if(name== "" && rollno== "" && branch== ""){
+        alert('Invalid details');
+        return;
+      }else{
+        alert('Student is Added');
+      }
+      
+    }
+
+    function logoutfun(){
+      if(confirm("Do you want to Logout?")){
+        close();
+      }
+    }
+  </script>
+</body>
+</html>

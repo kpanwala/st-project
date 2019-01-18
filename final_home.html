@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Krub:500|Merriweather:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+/* Style the topnav links */
+.topnav li {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav li:hover {
+    background-color: black;
+    color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+	font-size:25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	color:white;
+}
+
+li.dropdown {
+    display: inline-block;
+	
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+.dropdown-content a:hover {background-color: rgb(180,180,180);}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+	position:sticky;
+    overflow: hidden;
+    
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title 
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+*/
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+   
+    z-index: 7;
+}
+
+
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg{
+    width: 100%;
+    padding: 20px;
+}
+
+
+.fakeimg1{
+	-webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.fakeimg1:hover {
+    width: 100px;
+    height: 300px;
+}
+
+/* Add a card effect for articles */
+.card1 {
+    background-color: white;
+    padding: 20px;
+	height:250px;
+	 border-radius: 15px;
+	box-shadow: 0px 4px 4px 2px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.card1:hover {
+    box-shadow: 2px 6px 8px 6px rgba(0,0,0,0.2);
+}
+
+.fakeimg:hover {
+    box-shadow: 2px 4px 4px 3px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.2);
+}
+
+.card {
+	border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+    margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.active{
+background-color:blue;
+}
+
+
+
+.parallax {
+    background-color:linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+    background-image: url("img/svnit.png");
+     
+	height: 700px;
+	width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-letter-spacing--1 {
+  letter-spacing: .0625rem;
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+#ig:hover{
+width:50px;
+height:50px;
+}
+#fg:hover{
+width:50px;
+height:50px;
+}
+#tg:hover{
+width:50px;
+height:50px;
+}
+
+/* Center the loader */
+#loader {
+  margin-left:43%;
+  margin-top:15%;
+  width: 200px;
+  height: 200px;
+  border-left: 15px solid #f9d423;
+  border-right: 15px solid #ff4e50;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: 100% 20px;
+  background-size: 100% 20px;
+
+background-image: -webkit-linear-gradient(to right, #30cfd0 0%, #330867 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -moz-linear-gradient(to right, #30cfd0 0%, #330867 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -o-linear-gradient(to right, #30cfd0 0%, #330867 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%), linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+
+}
+background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+
+#loader1 {
+  margin-left:43%;
+  margin-top:15%;
+  width: 200px;
+  height: 200px;
+  border-left: 15px solid #f9d423;
+  border-right: 15px solid #ff4e50;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: 100% 20px;
+  background-size: 100% 20px;
+
+background-image: -webkit-linear-gradient(to top, #30cfd0 0%, #330867 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -moz-linear-gradient(to top, #30cfd0 0%, #330867 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: -o-linear-gradient(to top, #30cfd0 0%, #330867 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+  background-image: linear-gradientlinear-gradient(to top, #30cfd0 0%, #330867 100%), linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from { opacity:0 } 
+  to {opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ opacity:0 } 
+  to{ opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div class="container">
+<div id="loader"></div>
+</div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+ <div class="parallax"></div>
+
+  
+
+<div class="topnav" >
+<li class="active" style="width:25%;">
+	<a href="#" style="width:15%; font-size:25px;">Home</a>
+</li>
+<li class="dropdown" style="width:25%;">
+	<a href="student.html" style="width:15%; font-size:25px;" class="dropbtn">Student&emsp;&emsp;</a>
+</li>
+	
+<li class="dropdown" style="width:25%;">
+	<a href="" style="width:15%; font-size:25px;" class="dropbtn">Department&emsp;&emsp;</a>
+	<div class="dropdown-content">
+      <a href="compstudent.html">Computer Department</a>
+      <a href="civilstudent.html">Civil Department</a>
+      <a href="ecstudent.html">Electronics Department</a>
+    </div>
+</li>
+  <li style="width:25%;">
+  <center>
+  <a href="final_login.html" style=" width:15%; font-size:25px;">Login</a>
+  </center>
+  </li>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>History</h2>
+      
+      <div class="fakeimg" style="height:250px;">
+	  <marquee direction="left" behavior="alternate">
+	  <img src="img/quicktour.jpg" style="height:200px; width:40%" alt="quicktour"></img>
+	  &emsp;
+	  <img src="img/entry.jpg" style="height:200px; width:40%" alt="entry gate"></img>
+	  &emsp;
+	  <img src="img/canteen.jpg" style="height:200px; width:40%" alt="canteen"></img>
+	  </marquee>
+	  </div>
+     <ul class="g-letter-spacing--1" style="font-family: 'Krub', sans-serif;"><li>The National Institute of Technology, Surat (NIT Surat), formally known as Sardar Vallabhbhai National Institute of Technology or SVNIT</li><br><li> SVNIT is an engineering institute of higher education established by the Parliament of India in 1961.</li><br> <li>It is one of 30 National Institutes of Technology in India recognized by the Government of India as an Institute of National Importance.</li><br>
+	  <li>In order to serve the growing demand for trained quality technical manpower, the Government Of India established fourteen Regional Engineering Colleges (RECs) between 1959 and 1965, now known as NITs with campuses at Surat, Allahabad, Bhopal, Calicut, Durgapur, Kurukshetra, Jamshedpur, Jaipur, Nagpur, Rourkela, Srinagar, Surathkal, Tiruchirappalli, and Warangal.</li>
+	  <br><li>Under its former name, Sardar Vallabhbhai Regional College of Engineering and Technology, NIT Surat was established in June 1961 as a co-operative venture between the Government of India and the Government of Gujarat. The institute is named after India's first Home Minister, fondly known as the Ironman of India, honorable Sardar Vallabhbhai Patel.</li>
+	  <br><a href="https://en.wikipedia.org/wiki/Sardar_Vallabhbhai_National_Institute_of_Technology,_Surat">Read more</a>
+	  </ul>
+    </div>
+    <div class="card">
+      <h2>Our Mission</h2>
+      <div class="g-letter-spacing--1" style="background-color:#f1f1f1; height:95px; text-align:center; font-size:20px; "><h5><br>&emsp;"To be a globally accepted centre of excellence in technical education catalyzing absorption, innovation, diffusion and transfer of high technologies resulting in enhanced quality for all the stake holders"<br></h5></div> 
+    </div>
+	<div class="card">
+	<h2>Our Vision</h2>
+	<div class="g-letter-spacing--1" style="background-color:#f1f1f1; height:85px; text-align:center;  font-size:20px;"><h5><br>&emsp;"To be one of the leading Technical Institutes disseminating globally acceptable education, effective industrial training and relevant research output"<br></h5></div>
+	</div>
+	<div class="card">
+	<h2>Achievements</h2>
+	<div style="background-color:#f1f1f1; height:215px; "><h5><br>&emsp;
+	<ol style="font-size:15px;" class="g-letter-spacing--1" >
+	<li >&emsp;Congratulations to the Rogers Team for winning INTER-NIT basketball tournament held in NIT-Jaipur</li><br>
+	<li>&emsp;Congratulations to the golden touch Team for acquiring 2nd position INTER-NIT football tournament held in NIT-Jamshedpur</li><br>
+	<li>&emsp;Congratulations to Mr Dholakiya sir,Applied Chemical Department for patent of finding(3-halo-pentyl) for cancer </li><br>
+	<a href="http://svnit.ac.in/web/achievements.php" >read more</a>
+	</ol>
+	<br></h5></div>
+	</div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card1">
+      <h2>About SVNIT</h2>
+      <marquee direction="up" height="140px">
+      <ul style="font-family: 'Krub', sans-serif;"><li>The National Institute of Technology, Surat (NIT Surat), formally known as Sardar Vallabhbhai National Institute of Technology or SVNIT</li><br><li> SVNIT is an engineering institute of higher education established by the Parliament of India in 1961.</li><br> <li>It is one of 30 National Institutes of Technology in India recognized by the Government of India as an Institute of National Importance.</li><br>
+	  </ul></marquee>
+	 
+    </div>
+    <div class="card">
+      <h3>Popular Clubs</h3>
+      <div class="fakeimg" style="background-color: #f1f1f1; "><p>Drishti<a href="http://www.svnit.ac.in/stu_chap/drishti/" style="float:right;"><strong>></strong></a></p></div>
+	  <br>
+      <div class="fakeimg" style="background-color: #f1f1f1; "><p>ACM<a href="http://nitsurat.acm.org/" style="float:right;"><strong>></strong></a></p></div>
+	  <br>
+      <div class="fakeimg" style="background-color: #f1f1f1; "><p>SAE<a href="#" style="float:right;"><strong>></strong></a></p></div>
+	  <br>
+	  <div class="fakeimg" style="background-color: #f1f1f1; "><p>CES<a href="#" style="float:right;"><strong>></strong></a></p></div>
+	  <br>
+	  <div class="fakeimg" style="background-color: #f1f1f1; "><p>Scosh<a href="#" style="float:right;"><strong>></strong></a></p></div>
+	  <br>
+    </div>
+    <div class="card">
+      <h3>Follow Svnit on</h3>
+      <a href="https://www.instagram.com/explore/locations/249686668/india/surat-gujarat/svnit-surat-gujarat/"><img id="ig" src="img/insta.jpg" height="40px" width="40px" title="Instagram"></img></a>
+	  
+	   <a href="https://twitter.com/nit_surat"><img id="tg" src="img/tweet.jpg" height="35px" width="35px" title="Twitter"></img></a>
+	 
+	    <a href="https://www.facebook.com/svnit/"><img id="fg" src="img/fb.jpg" height="40px" width="40px" title="Facebook"></img></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h1><center>Contact us</center></h2>
+  <div style="background-color: #f1f1f1; padding:20px; ">
+  <h2><center>S. V. NATIONAL INSTITUTE OF TECHNOLOGY</center></h2>
+  <h3 style="font-family: 'Krub', sans-serif;"><p><strong>E-mail&emsp;&emsp;: </strong>svnit123@gmail.com</p>
+<p>Address &emsp;: Ichchhanath, SURAT-395007,Gujarat.</p>
+<p>Office &emsp;&emsp;: 0261-2259571, 2259582-84.</p>
+<p>Fax &emsp;&emsp;&emsp; : 0261-2227334, 2228394 </p></h3>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
